@@ -21,6 +21,30 @@ public class Main {
         // 3. Use if/else to add the correct price to totalCost
         // 4. If they type 0, change isOrdering to false to break the loop!
 
+        while(isOrdering) {
+            System.out.println("MENU: ");
+            System.out.println("[1] Cold Brew ($4.50)");
+            System.out.println("[2] Iced Latte ($5.00)");
+            System.out.println(" [0] Finish Order");
+
+            System.out.println("What you want to order? :");
+
+            int choice = scanner.nextInt();
+
+            if(choice == 1) {
+                totalCost += 4.50;
+            }
+            else if(choice == 2) {
+                totalCost += 5.00;
+            }
+            else if(choice == 0) {
+                isOrdering = false;
+            }
+            else {
+                System.out.println("Invalid input");
+            }
+        }
+
         // --- FINAL OUTPUT ---
         // (Print this exactly after the loop finishes)
         System.out.println("Order complete! Your total is: $" + totalCost);
